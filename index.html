@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alibaba Cloud CDN Homework</title>
+</head>
+<body>
 
+<h1>Alibaba Cloud CDN Homework</h1>
+<p>Hosted on GitHub Pages and delivered through Alibaba Cloud CDN.</p>
+
+<hr>
+
+<h2>Student Verification</h2>
+<p><strong>Name:</strong> Talal Saad Al-RESHIDI</p>
+<p><strong>Student ID:</strong> 461103983</p>
+<p><strong>Verification Token:</strong> 461103983-Student-20261103</p>
+<p><strong>Version:</strong> 1</p>
+<p><strong>Last Updated:</strong> 2026-11-03</p>
+<p><strong>GitHub Repository:</strong> i7irrl.github.io</p>
+<p><strong>Domain:</strong> test75.shop</p>
+
+<hr>
+
+<h2>JSON Test</h2>
+<p id="news">Loading news.json...</p>
+
+<hr>
+
+<h2>Downloads</h2>
+<a href="downloads/guide.pdf">Download Guide PDF</a>
+
+<script>
+fetch("api/news.json")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("news").innerText = data.message;
+})
+.catch(error => {
+    document.getElementById("news").innerText = "Failed to load JSON file";
+});
+</script>
+
+</body>
+</html>
